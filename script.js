@@ -12,18 +12,18 @@ image['2019']['02_february'] = 14;
 
 
 // define event listeners =====================================================================
-window.addEventListener('resize', handleResize);
 for (let i = 0; i < grid201902Container.children.length; i++) {
 	grid201902Container.children[i].addEventListener('click', handleClick);
 }
 for (let i = 0; i < grid201901Container.children.length; i++) {
 	grid201901Container.children[i].addEventListener('click', handleClick);
 }
+window.addEventListener('resize', handleResize);
 
 
 // define event listener functions ============================================================
 function handleResize() {
-	console.log('resize');
+	// console.log('resize');
 }
 
 function handleClick() {
@@ -31,15 +31,16 @@ function handleClick() {
 		year: this.id.substring(4, 8),
 		month: this.id.substring(9, 11),
 		image: this.id.slice(12)
-	}
+	};
 	let imageUrl = `images/${thumnailData.year}/${thumnailData.month}/${thumnailData.image}.jpg`;
 	updatePannellum(imageUrl);
 	updateThumbnail(thumnailData);
 }
 
+
 // define functions ===========================================================================
 function init() {
-	console.log(`Take 3`);
+	console.log(`Take 5`);
 	grid201902Container.children[13].click();
 }
 

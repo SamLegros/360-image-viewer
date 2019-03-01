@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- cdn font awesome all.css 5.7.2 -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<!-- cdn bootstrap.css 4.3.1 -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- cdn pannellum.css 2.4 -->
@@ -15,13 +17,21 @@
 	<div id="content-div">
 		<h1>Curate 360 Image Viewer</h1>
 		<div id="panorama"></div>
-		<div id="image-grid-div">
-			<h2>March</h2>
-			<div class="container">
-				<div class="row">
-					<p>No images.</p>
-				</div>
+		<div id="controls-div" class="container">
+			<div class="row">
+				<p class="col-6 col-lg-3 offset-lg-3"><i class="fas fa-hand-rock text-secondary"></i><br />Pan Image</p>
+				<p class="col-6 col-lg-3"><i class="fas fa-scroll text-secondary"></i><br />Zoom In/ Out</p>
 			</div>
+			<div class="row">
+				<p class="col-6 col-sm-4 col-md-3 col-lg-2"><span class="badge badge-secondary"><i class="fas fa-caret-up text-white"></i></span> / <span class="badge badge-secondary">W</span><br />Look up</p>
+				<p class="col-6 col-sm-4 col-md-3 col-lg-2"><span class="badge badge-secondary"><i class="fas fa-caret-left text-white" style="padding: 0 2px;"></i></span> / <span class="badge badge-secondary">A</span><br /> Look left</p>
+				<p class="col-6 col-sm-4 col-md-3 col-lg-2"><span class="badge badge-secondary"><i class="fas fa-caret-right text-white" style="padding: 0 2px;"></i></span> / <span class="badge badge-secondary">S</span><br />Look left</p>
+				<p class="col-6 col-sm-4 col-md-3 col-lg-2"><span class="badge badge-secondary"><i class="fas fa-caret-down text-white"></i></span> / <span class="badge badge-secondary">D</span><br />Look left</p>
+				<p class="col-6 col-sm-4 col-md-6 col-lg-2"><span class="badge badge-secondary">Shift</span><br />Zoom in</p>
+				<p class="col-6 col-sm-4 col-md-6 col-lg-2"><span class="badge badge-secondary">Control</span><br />Zoom out</p>
+			</div>
+		</div>
+		<div id="image-grid-div">
 			<h2>February</h2>
 			<div id="grid-2019-02-container" class="container">
 				<div class="row">
