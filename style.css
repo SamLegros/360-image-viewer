@@ -1,0 +1,43 @@
+body {
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 20px;
+	text-align: center;
+}
+
+#content-div {
+	border: 1px solid red;
+	height: 100%;
+	width: 100%;
+}
+
+#panorama {
+	height: 400px;
+	margin: 20px auto;
+	width: 600px;
+}
+
+#image-grid-div {
+	border: 1px solid green;
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+#image-grid-div h2 {
+	text-align: left;
+}
+
+#image-grid-div img {
+	border: 1px solid blue;
+	cursor: pointer;
+	height: 50px;
+}
+
+#month-button-div {
+	max-width: 500px;
+	padding: 10px 0px;
+}
+
+#month-button-div button {
+	margin: 10px;
+}
