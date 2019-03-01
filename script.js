@@ -11,7 +11,7 @@ let image = {'2019': {}};
 image['2019']['01_january'] = 1;
 image['2019']['02_february'] = 14;
 
-let liveBaseUrl = 'https://github.com/SamLegros/curate-360-images/blob/master/images/';
+let liveBaseUrl = 'https://github.com/SamLegros/curate-360-images/blob/master/';
 
 console.log(grid201902Container.children.length);
 
