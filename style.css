@@ -1,3 +1,8 @@
+:root{
+	--bootstrap-primary: #007BFF;
+	--bootstrap-secondary: #6C757D;
+}
+
 body {
 	margin: 0 auto;
 	max-width: 1000px;
@@ -27,10 +32,13 @@ body {
 	text-align: left;
 }
 
-#image-grid-div img {
-	border: 1px solid blue;
+#image-grid-div .col-6 {
+	background-color: var(--bootstrap-secondary);
+	/* border: 1px solid blue; */
+	border-radius: 5px;
 	cursor: pointer;
 	height: 50px;
+	margin: 5px;
 }
 
 #month-button-div {
@@ -40,4 +48,8 @@ body {
 
 #month-button-div button {
 	margin: 10px;
+}
+
+.thumbnail-active {
+	background-color: var(--bootstrap-primary) !important;
 }

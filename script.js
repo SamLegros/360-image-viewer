@@ -1,26 +1,23 @@
 // define variables ===========================================================================
-let developing = true;
-
 // html
 let contentDiv = document.getElementById('content-div');
 let panoramaDiv = document.getElementById('panorama');
 let grid201902Container = document.getElementById('grid-2019-02-container').firstElementChild;
+let grid201901Container = document.getElementById('grid-2019-01-container').firstElementChild;
 
 // images
 let image = {'2019': {}};
 image['2019']['01_january'] = 1;
 image['2019']['02_february'] = 14;
 
-let liveBaseUrl = 'https://github.com/SamLegros/curate-360-images/blob/master/';
-
-console.log(grid201902Container.children.length);
-
 
 // define event listeners =====================================================================
 window.addEventListener('resize', handleResize);
-
 for (let i = 0; i < grid201902Container.children.length; i++) {
 	grid201902Container.children[i].addEventListener('click', handleClick);
+}
+for (let i = 0; i < grid201901Container.children.length; i++) {
+	grid201901Container.children[i].addEventListener('click', handleClick);
 }
 
 
@@ -30,16 +27,42 @@ function handleResize() {
 }
 
 function handleClick() {
-	let year = this.alt.substring(0, 4);
-	let month = this.alt.substring(5, 7);
-	let image = this.alt.slice(8);
-	let imageUrl = `images/${year}/${month}/${image}.jpg`;
+	console.log(this.id);
+	let thumnailData = {
+		year: this.id.substring(4, 8),
+		month: this.id.substring(9, 11),
+		image: this.id.slice(12)
+	}
+	let imageUrl = `images/${thumnailData.year}/${thumnailData.month}/${thumnailData.image}.jpg`;
+	updatePannellum(imageUrl);
+	updateThumbnail(thumnailData);
+}
 
-	if (!developing) {
-		imageUrl = liveBaseUrl + imageUrl;
-		console.log(imageUrl);
+// define functions ===========================================================================
+function init() {
+	console.log(`Take 2`);
+	grid201902Container.children[13].click();
+}
+
+function updateThumbnail(data) {
+	let idInt = parseInt(data.image)-1;
+
+	for (let i = 0; i < grid201902Container.children.length; i++) {
+		grid201902Container.children[i].classList.remove('thumbnail-active');
 	}
 
+	for (let i = 0; i < grid201901Container.children.length; i++) {
+		grid201901Container.children[i].classList.remove('thumbnail-active');
+	}
+
+	if (data.month == '01') {
+		grid201901Container.children[idInt].classList.add('thumbnail-active');
+	} else if (data.month == '02') {
+		grid201902Container.children[idInt].classList.add('thumbnail-active');
+	}
+}
+
+function updatePannellum(imageUrl) {
 	pannellum.viewer('panorama', {
 		'autoLoad': true,
 		"autoRotate": -5,
@@ -47,12 +70,6 @@ function handleClick() {
 		'panorama': imageUrl,
 		'type': 'equirectangular',
 	});
-}
-
-// define functions ===========================================================================
-function init() {
-	console.log(`Take 2`);
-	grid201902Container.children[13].click();
 }
 
 
