@@ -1,5 +1,5 @@
 // define variables ===========================================================================
-let developing = false;
+let developing = true;
 
 // html
 let contentDiv = document.getElementById('content-div');
