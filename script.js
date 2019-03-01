@@ -51,7 +51,7 @@ function handleClick() {
 
 // define functions ===========================================================================
 function init() {
-	console.log(`Take 1`);
+	console.log(`Take 2`);
 	grid201902Container.children[13].click();
 }
 
