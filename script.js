@@ -27,7 +27,6 @@ function handleResize() {
 }
 
 function handleClick() {
-	console.log(this.id);
 	let thumnailData = {
 		year: this.id.substring(4, 8),
 		month: this.id.substring(9, 11),
@@ -40,7 +39,7 @@ function handleClick() {
 
 // define functions ===========================================================================
 function init() {
-	console.log(`Take 2`);
+	console.log(`Take 3`);
 	grid201902Container.children[13].click();
 }
 
@@ -63,6 +62,7 @@ function updateThumbnail(data) {
 }
 
 function updatePannellum(imageUrl) {
+	panoramaDiv.innerHTML = '';
 	pannellum.viewer('panorama', {
 		'autoLoad': true,
 		"autoRotate": -5,
