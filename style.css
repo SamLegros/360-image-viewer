@@ -11,19 +11,15 @@ body {
 }
 
 #content-div {
-	/* border: 1px solid red; */
 	height: 100%;
 	width: 100%;
 }
 
 #panorama {
-	height: 500px;
 	margin: 20px auto;
-	width: 800px;
 }
 
 #image-grid-div {
-	/* border: 1px solid green; */
 	margin: 0 auto;
 	max-width: 600px;
 }
@@ -34,7 +30,6 @@ body {
 
 #image-grid-div .col-md-2 {
 	background-color: var(--bootstrap-secondary);
-	/* border: 1px solid blue; */
 	border-radius: 5px;
 	cursor: pointer;
 	height: 50px;
