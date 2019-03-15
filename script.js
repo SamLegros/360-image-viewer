@@ -95,7 +95,7 @@ function updatePannellum(imageUrl) {
 	panoramaDiv.innerHTML = '';
 	pannellum.viewer('panorama', {
 		'autoLoad': true,
-		"autoRotate": -5,
+		// "autoRotate": -5,
 		'compass': false,
 		'panorama': imageUrl,
 		'type': 'equirectangular',

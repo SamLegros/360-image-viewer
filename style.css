@@ -6,44 +6,29 @@
 body {
 	margin: 0 auto;
 	max-width: 1000px;
-	padding: 20px;
+	padding: 0px;
+	font-family: Helvetica, sans-serif;
 	text-align: center;
 }
 
-#content-div {
+/* #content-div {
 	height: 100%;
 	width: 100%;
-}
+} */
 
-#panorama {
-	margin: 20px auto;
-}
-
-#image-grid-div {
+/* #image-grid-div {
 	margin: 0 auto;
+	text-align: center;
 	max-width: 600px;
-}
+} */
 
-#image-grid-div h2 {
-	text-align: left;
-}
-
-#image-grid-div .col-md-2 {
+/* .image-grid-row div {
 	background-color: var(--bootstrap-secondary);
 	border-radius: 5px;
 	cursor: pointer;
-	height: 50px;
+	height: 40px;
 	margin: 5px;
-}
-
-#month-button-div {
-	max-width: 500px;
-	padding: 10px 0px;
-}
-
-#month-button-div button {
-	margin: 10px;
-}
+} */
 
 .thumbnail-active {
 	background-color: var(--bootstrap-primary) !important;
